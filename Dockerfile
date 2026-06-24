@@ -24,4 +24,4 @@ VOLUME ["/config"]
 EXPOSE 2160
 
 # Startbefehl
-CMD ["python", "main.py"]
+CMD ["python", "app/main.py"]
