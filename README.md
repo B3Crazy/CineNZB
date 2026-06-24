@@ -27,7 +27,7 @@ Example docker-compose.yml:
         image: deinname/cinenzb:latest
         container_name: cinenzb
         ports:
-          - "5000:5000"
+          - "2160:2160"
         volumes:
           - "/path/to/nzb/library:/nzbs"
           - "/path/to/config:/config"
@@ -70,14 +70,14 @@ Supported environment variables:
 |----------|----------|-------------|
 | CONFIG_DIR | /config | Directory for DB & settings |
 | HOST | 0.0.0.0 | Bind address for the API |
-| PORT | 5000 | API port |
+| PORT | 2160 | API port |
 
 Example:
 
     environment:
       - CONFIG_DIR=/config
       - HOST=0.0.0.0
-      - PORT=5000
+      - PORT=2160
 
 ---
 
