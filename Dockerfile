@@ -1,7 +1,7 @@
 FROM python:3.11-slim
 
 # Arbeitsverzeichnis
-WORKDIR /app ./
+WORKDIR /app
 
 # Systemabhängigkeiten für watchdog
 RUN apt-get update && apt-get install -y \
@@ -14,7 +14,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Projekt kopieren
-COPY . .
+COPY app/ ./
 
     # Config-Verzeichnis erstellen
 RUN mkdir -p /config
