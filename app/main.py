@@ -1,9 +1,12 @@
 from flask import Flask, jsonify, render_template, send_file
 from libraryManagement.database import Base, engine
 from libraryManagement.models import NZB
+from libraryManagement.watcher import start_watcher
 import os
+import threading
 
 Base.metadata.create_all(engine)
+threading.Thread(target=start_watcher, daemon=True).start()
 app = Flask(__name__)
 
 # Route to check the health of the application
