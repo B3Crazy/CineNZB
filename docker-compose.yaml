@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    container_name: CineNZB
+    ports:
+      - "2160:2160"
+    volumes:
+      - .:/app
+      - "C:/Users/Paul/Videos/Temp Film Repo/NZBs/docker test:/nzbs"
